@@ -48,3 +48,6 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+# 07.10.2024
+# 23:59
