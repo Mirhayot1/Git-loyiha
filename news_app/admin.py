@@ -1,10 +1,13 @@
 from django.contrib import admin
-from .models import Category, News
+from .models import Category, News, Contact
 # Register your models here.
 
 # 1-usul
 # admin.site.register(Category)
 # admin.site.register(News)
+
+admin.site.register(Contact)
+
 
 # 2-usul
 @admin.register(News)

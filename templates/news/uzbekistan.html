@@ -20,15 +20,15 @@
                         </div>
                          <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_1.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ localnews.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_1.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.1.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_1.pk %}">{{local_1.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{local_1.body | truncatewords:8}}</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ localnews.1.get_absolute_url }}">{{ localnews.1.title | truncatewords:5  }}</a>
+                                    <p class="m-0">{{localnews.1.body | truncatewords:8}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
