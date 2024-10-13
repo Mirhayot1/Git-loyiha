@@ -130,7 +130,7 @@ def contact(request):
     return render(request, 'news/contact.html', context)
 
 
-
+#ozgarishlar
 
 
 

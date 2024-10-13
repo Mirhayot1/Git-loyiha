@@ -34,58 +34,57 @@
                 <div class="row mx-0">
                     <div class="col-md-6 px-0">
                         <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" src="{{ local_1.image.url }}"
+                            <img class="img-fluid w-100 h-100" src="{{ local_news.1.image.url }}"
                                  style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                         href="{% url 'news_detail_page' local_1.pk %}">Batafsil</a>
-                                    <a class="text-white" href=""><small>{{ local_1.publish_time}}</small></a>
+                                    <a class="text-white" href=""><small>{{ local_news.1.publish_time}}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_1.pk %}">{{ local_1.title | truncatewords:5 }}</a>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.1.pk %}">{{ local_news.1.title | truncatewords:5 }}</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6 px-0">
                         <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" src="{{ local_2.image.url }}"
+                            <img class="img-fluid w-100 h-100" src="{{ local_news.2.image.url }}"
                                  style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                         href="{% url 'news_detail_page' local_2.pk %}">Batafsil</a>
-                                    <a class="text-white" href=""><small>{{ local_1.publish_time }}</small></a>
+                                    <a class="text-white" href=""><small>{{ local_news.2.publish_time }}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_2.pk %}">{{ local_2.title | truncatewords:5 }}</a>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ local_news.2.title | truncatewords:5 }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 px-0">
                         <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" src="{{ local_3.image.url }}"
+                            <img class="img-fluid w-100 h-100" src="{{ local_news.3.image.url }}"
                                  style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                         href="{% url 'news_detail_page' local_3.pk %}">Batafsil</a>
-                                    <a class="text-white" href=""><small>{{ local_1.publish_time }}</small></a>
+                                    <a class="text-white" href=""><small>{{ local_news.3.publish_time }}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">{{ local_3.title | truncatewords:5 }}</a>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.3.pk %}">{{ local_news.3.title | truncatewords:5 }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 px-0">
                         <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" src="{{ local_4.image.url }}" style="object-fit: cover;">
+                            <img class="img-fluid w-100 h-100" src="{{ local_news.4.image.url }}" style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                        href="{% url 'news_detail_page' local_4.pk %}">Batafsil</a>
-                                    <a class="text-white" href=""><small>{{ local_1.publish_time }}</small></a>
+                                        href="{% url 'news_detail_page' local_news.4.pk %}">Batafsil</a>
+                                    <a class="text-white" href=""><small>{{ local_news.4.publish_time }}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">{{ local_4.title | truncatewords:5 }}</a>
-                            </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.4.pk %}">{{ local_news.4.title | truncatewords:5 }}</a>                            </div>
                         </div>
                     </div>
                 </div>

@@ -44,15 +44,20 @@ class News(models.Model):
     objects = models.Manager()
     published = PublishedManager()
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         ordering = ["-publish_time"]
 
 
-    def __str__(self):
-        return self.title
+
+
 
     def get_absolute_url(self):
-        return reverse("news_detail_page", args=(self.slug))
+        return reverse("news_detail_page", args=[self.slug])
+
+
 class ContactData(models.Model):
     adress = models.CharField(max_length=150)
     phone = models.CharField(max_length=50)
