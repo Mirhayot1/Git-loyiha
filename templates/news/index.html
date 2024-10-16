@@ -39,7 +39,7 @@
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                        href="{% url 'news_detail_page' local_1.pk %}">Batafsil</a>
+                                        href="{% url 'news_detail_page' local_news.1.pk %}">Batafsil</a>
                                     <a class="text-white" href=""><small>{{ local_news.1.publish_time}}</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.1.pk %}">{{ local_news.1.title | truncatewords:5 }}</a>
@@ -54,7 +54,7 @@
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                        href="{% url 'news_detail_page' local_2.pk %}">Batafsil</a>
+                                        href="{% url 'news_detail_page' local_news.2.pk %}">Batafsil</a>
                                     <a class="text-white" href=""><small>{{ local_news.2.publish_time }}</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ local_news.2.title | truncatewords:5 }}</a>
@@ -68,7 +68,7 @@
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                        href="{% url 'news_detail_page' local_3.pk %}">Batafsil</a>
+                                        href="{% url 'news_detail_page' local_news.3.pk %}">Batafsil</a>
                                     <a class="text-white" href=""><small>{{ local_news.3.publish_time }}</small></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.3.pk %}">{{ local_news.3.title | truncatewords:5 }}</a>
@@ -104,7 +104,7 @@
                         <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                             style="width: calc(100% - 170px); padding-right: 90px;">
                             <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">Hamster kombat listingi 26-sentabr kuni bo'lib o'tdi</a></div>
-                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">{{local_2.body | truncatewords:11}}</a></div>
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">{{local_news.2.body | truncatewords:11}}</a></div>
                         </div>
                     </div>
                 </div>
@@ -125,14 +125,14 @@
                 <h4 class="m-0 text-uppercase font-weight-bold">Jahon yangiliklari</h4>
             </div>
             <div class="owl-carousel news-carousel carousel-item-4 position-relative">
-                {% for news in jahon_one %}
+                {% for news in world_news %}
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid h-100" src="{{ news.image.url }}" style="">
+                    <img class="img-fluid h-100" src="{{ world_news.image.url }}" style="">
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                 href="">Jahon</a>
-                            <a class="text-white" href=""><small>{{ local_1.publish_time }}</small></a>
+                            <a class="text-white" href=""><small>{{ news.1.publish_time }}</small></a>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' news.pk %}"> {{ news.title | truncatewords:6}}</a>
                     </div>
@@ -157,15 +157,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ sport_1.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ sport_news.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Sport</a>
-                                        <a class="text-body" href=""><small>{{ sport_1.publish_time }}</small></a>
+                                        <a class="text-body" href=""><small>{{ sport_news.1.publish_time }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' sport_1.pk %}">{{ sport_1.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ sport_1.body | truncatewords:10}}</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' sport_news.1.pk %}">{{ sport_news.1.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ sport_news.1.body | truncatewords:10}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -181,15 +181,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ sport_2.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ sport_news.2.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Sport</a>
-                                        <a class="text-body" href=""><small>{{local_2.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{local_news.2.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_2.pk %}">{{ sport_2.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ sport_2.body | truncatewords:10}}</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ sport_news.2.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ sport_news.2.body | truncatewords:10}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -207,15 +207,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ local_1.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ local_news.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_1.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{ local_news.1.created_time }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_1.pk %}">{{ local_1.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_1.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.1.pk %}">{{ local_news.1.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ local_news.1.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -231,15 +231,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ local_2.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ local_news.2.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_2.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{local_news.2.created_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_2.pk %}">{{ local_2.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_2.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ local_news.2.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ local_news.2.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -256,15 +256,15 @@
 
                          <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ iqtisodiyot1.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ economy.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Iqtisodiyot</a>
-                                        <a class="text-body" href=""><small>{{iqtisodiyot1.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{economy.1.created_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' iqtisodiyot1.pk %}">{{iqtisodiyot1.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ iqtisodiyot1.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' economy.1.pk %}">{{economy.1.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ economy.1.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -280,15 +280,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ iqtisodiyot2.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ economy.2.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Iqtisodiyot</a>
-                                        <a class="text-body" href=""><small>{{iqtisodiyot2.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{economy.2.created_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' iqtisodiyot2.pk %}">{{iqtisodiyot2.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ iqtisodiyot2.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' economy.2.pk %}">{{economy.2.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ economy.2.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -305,17 +305,17 @@
                         <div class="col-lg-12">
                             <div class="row news-lg mx-0 mb-3">
                                 <div class="col-md-6 h-100 px-0">
-                                    <img class="img-fluid h-100" src="{{fan_texnika1.image.url  }}" style="object-fit: cover;">
+                                    <img class="img-fluid h-100" src="{{techno_news.1.image.url  }}" style="object-fit: cover;">
                                 </div>
                                 <div class="col-md-6 d-flex flex-column border bg-white h-100 px-0">
                                     <div class="mt-auto p-4">
                                         <div class="mb-2">
                                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                                 href="">Fan-texnika</a>
-                                            <a class="text-body" href=""><small>{{ fan_texnika1.created_time }}</small></a>
+                                            <a class="text-body" href=""><small>{{ techno_news1.created_time }}</small></a>
                                         </div>
-                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' fan_texnika1.pk %}">{{ fan_texnika1.title | truncatewords:6 }}</a>
-                                        <p class="m-0">{{ fan_texnika1.body | truncatewords:12 }}</p>
+                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' techno_news.1.pk %}">{{ techno_news.1.title | truncatewords:6 }}</a>
+                                        <p class="m-0">{{ techno_news.1.body | truncatewords:12 }}</p>
                                     </div>
                                     <div class="d-flex justify-content-between bg-white border-top mt-auto p-4">
                                         <div class="d-flex align-items-center">
@@ -332,15 +332,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ jamiyat1.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ jamiyat.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Jamiyat</a>
-                                        <a class="text-body" href=""><small>{{jamiyat1.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{jamiyat.1.created_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' jamiyat1.pk %}">{{ jamiyat1.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ jamiyat1.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' jamiyat.1.pk %}">{{ jamiyat.1.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ jamiyat.1.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -356,15 +356,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ jamiyat2.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ jamiyat.2.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">Jamiyat</a>
-                                        <a class="text-body" href=""><small>{{jamiyat2.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{jamiyat.2.created_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' jamiyat2.pk %}">{{jamiyat2.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ jamiyat2.body | truncatewords:7}}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' jamiyat.2.pk %}">{{jamiyat.2.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ jamiyat.2.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">

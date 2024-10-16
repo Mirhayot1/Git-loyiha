@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import TemplateView, ListView
-from .models import  Category, News
-
+from django.views.generic import TemplateView, ListView, UpdateView, DeleteView, CreateView
+from .models import Category, News
+from .forms import ContactForm
+from django.http import Http404, HttpResponse
+from django.urls import reverse_lazy
 
 def news_list(request):
     news_list = News.objects.filter(status=News.Status.Published)
@@ -24,7 +26,7 @@ def news_detail(request, news):
 
 
 
-class HomaPageView(TemplateView):
+class HomePageView(TemplateView):
     model = News
     template_name = "news/index.html"
     contact_object_name = 'news'
@@ -39,7 +41,27 @@ class HomaPageView(TemplateView):
         context['techno_news'] = News.published.all().filter(category__name="Fan_texnika").order_by('-publish_time')
         context['economy'] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time')
         # context['galery] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time)
-        context['jamiyat'] = News.published.all().filter(categrory__name="Jamiyat").order_by('-publish_time')
+        context['jamiyat'] = News.published.all().filter(category__name="Jamiyat").order_by('-publish_time')
+        return context
+
+
+
+class HomePageView2(TemplateView):
+    model = News
+    template_name = "news/base.html"
+    contact_object_name = 'news'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        context['news_list'] = News.published.all().order_by('-publish_time')[:4]
+        context['local_news'] = News.published.all().filter(category__name="Uzbekistan").order_by('-publish_time')
+        context['world_news'] = News.published.all().filter(category__name="Jahon")[0:4]
+        context['sport_news'] = News.published.all().filter(category__name="Sport").order_by('-publish_time')
+        context['techno_news'] = News.published.all().filter(category__name="Fan_texnika").order_by('-publish_time')
+        context['economy'] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time')
+        # context['galery] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time)
+        context['jamiyat'] = News.published.all().filter(category__name="Jamiyat").order_by('-publish_time')
         return context
 
 
@@ -84,6 +106,16 @@ class SportNewsView(ListView):
 
         return news
 
+class JamiyatNewsView(ListView):
+    model = News
+    template_name = 'news/jamiyat.html'
+    context_object_name = 'jamiyatnews'
+
+    def get_queryset(self, **kwargs):
+        news = News.published.all().filter(category__name="Jamiyat").order_by('-publish_time')
+
+        return news
+
 
 class IqtisodiyotNewsView(ListView):
     model = News
@@ -108,7 +140,7 @@ class ContactPageView(TemplateView):
 
 
     def post(self, request, *args, **kwargs):
-        form = ContactForm(request,POST)
+        form = ContactForm(request, POST)
         if request.method == 'POST' and form.is_valid():
             form.save()
             return HttpResponse("<h2> Habar yuborildi </h2>")
@@ -129,6 +161,26 @@ def contact(request):
 
     return render(request, 'news/contact.html', context)
 
+
+class NewsUpdateView(UpdateView):
+    model = News
+    fields = ('title', 'body', 'image', 'category', 'status',)
+    template_name = 'crud/news_edit.html'
+    success_url = reverse_lazy('home')
+
+class NewsDeleteView(DeleteView):
+    model = News
+    template_name = 'crud/news_delete.html'
+    success_url = reverse_lazy('home')
+
+
+class NewsCreateView(CreateView):
+    model = News
+    template_name = 'crud/news_create.html'
+    fields = (
+        'title', 'slug', 'body', 'image', 'category', 'status',
+    )
+    success_url = reverse_lazy('home')
 
 #ozgarishlar
 

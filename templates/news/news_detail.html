@@ -8,4 +8,10 @@
     <p>{{ news.body }}</p>
     <img src="{{ news.image.url }}">
 
+<div>
+    <button class="btn btn-info"><a href="{% url 'news_create' %}">Yangilik qo'shish</a></button>
+    <button class="btn btn-success"><a href="{% url 'news_update' news.slug %}">Tahrirlash</a></button>
+    <button class="btn btn-danger"><a href="{% url 'news_delete' news.slug %}">O'chirish</a></button>
+</div>
+
 {% endblock content %}
