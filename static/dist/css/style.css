@@ -1,0 +1,93 @@
+body {
+  background-color:#cad5df;
+  font-family:helvetica;
+  color:#333;
+  font-size:12px
+}
+#container {
+  position:relative;
+  width:650px;
+  height:230px;
+  margin:50px auto;
+}
+.input_wrapper {
+  margin:20px auto;
+  width:200px;
+  height:66px;
+  border-radius:30px;
+  position:relative;
+  background: #aabfcd;
+  background: -moz-linear-gradient(top,  #aabfcd 0%, #eff3f6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aabfcd), color-stop(100%,#eff3f6));
+  background: -webkit-linear-gradient(top,  #aabfcd 0%,#eff3f6 100%);
+  background: -o-linear-gradient(top,  #aabfcd 0%,#eff3f6 100%);
+  background: -ms-linear-gradient(top,  #aabfcd 0%,#eff3f6 100%);
+  background: linear-gradient(to bottom,  #aabfcd 0%,#eff3f6 100%);
+}
+
+#blt_wrapper,input {
+  width:184px;
+  height:50px;
+  position:absolute;
+  top:8px;
+  left:8px;
+  background:#5f9424;
+  border-radius:30px;
+}
+input {
+  background:rgba(255,255,255,0.5);
+  outline:none;
+  border:0;
+  padding:3px 10px;
+  width:164px;
+  height:44px;
+}
+#slider_blt {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  position:absolute;
+  left:0;
+  top:0;
+  box-shadow:3px 3px 10px #333;
+  background: #fffafa;
+  background: -moz-linear-gradient(top,  #fffafa 0%, #b4c0c9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffafa), color-stop(100%,#b4c0c9));
+  background: -webkit-linear-gradient(top,  #fffafa 0%,#b4c0c9 100%);
+  background: -o-linear-gradient(top,  #fffafa 0%,#b4c0c9 100%);
+  background: -ms-linear-gradient(top,  #fffafa 0%,#b4c0c9 100%);
+  background: linear-gradient(to bottom,  #fffafa 0%,#b4c0c9 100%);
+}
+#slider_blt:after {
+  content:"";
+  position:absolute;
+  width:40px;
+  height:40px;
+  background:#e2e8ec;
+  left:5px;
+  top:5px;
+  border-radius:50%;
+}
+
+#instruction {
+  background:#333;
+  width:170px;
+  height:29px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  text-align:center;
+  padding-top:15px;
+  font-size:12px;
+  color:#cad5df;
+}
+#instruction:after {
+  content:"";
+  position:absolute;
+  border-top:22px solid transparent;
+  border-right:22px solid transparent;
+  border-bottom:22px solid transparent;
+  border-left:22px solid #333;
+  right:-44px;
+  top:0;
+}

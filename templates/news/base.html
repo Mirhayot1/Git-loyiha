@@ -10,7 +10,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-    <link rel="icon" href="img/mirhayot.png" type="image/png">
+    <link rel="icon" href="static/img/mirhayot.png" type="image/png">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -37,16 +37,19 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-n2">
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Shanba, 21-Sentabr, 2024</a>
+                            <a class="nav-link text-body small" href=" ">Shanba, 21-Sentabr, 2024</a>
                         </li>
                         <li class="nav-item border-right border-secondary">
                             <a class="nav-link text-body small" href="#">Advertise</a>
                         </li>
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Contact</a>
+                            <a class="nav-link text-body small" href="{% url 'contact-us' %}">Aloqa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body small" href="#">Login</a>
+                            <a class="nav-link text-body small" href="{% url 'login' %}">Tizimga kirish</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body small" href="{% url 'logout' %}">Tizimdan chiqish</a>
                         </li>
                     </ul>
                 </nav>

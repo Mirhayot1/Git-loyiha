@@ -39,10 +39,10 @@
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                        href="{% url 'news_detail_page' local_news.1.pk %}">Batafsil</a>
+                                        href="{{ local_news.1.get_absolute_url }}">Batafsil</a>
                                     <a class="text-white" href=""><small>{{ local_news.1.publish_time}}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' local_news.1.pk %}">{{ local_news.1.title | truncatewords:5 }}</a>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{{ local_news.1.get_absolute_url }}">{{ local_news.1.title | truncatewords:5 }}</a>
                             </div>
                         </div>
                     </div>
@@ -127,14 +127,14 @@
             <div class="owl-carousel news-carousel carousel-item-4 position-relative">
                 {% for news in world_news %}
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid h-100" src="{{ world_news.image.url }}" style="">
+                    <img class="img-fluid h-100" src="{{ news.image.url }}" style="">
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                 href="">Jahon</a>
                             <a class="text-white" href=""><small>{{ news.1.publish_time }}</small></a>
                         </div>
-                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'news_detail_page' news.pk %}"> {{ news.title | truncatewords:6}}</a>
+                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{{ news.get_absolute_url }}"> {{ news.title | truncatewords:6}}</a>
                     </div>
                 </div>
                  {% endfor %}
@@ -161,10 +161,10 @@
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                            href="">Sport</a>
+                                            href="Sport/">Sport</a>
                                         <a class="text-body" href=""><small>{{ sport_news.1.publish_time }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' sport_news.1.pk %}">{{ sport_news.1.title | truncatewords:5}}</a>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ sport_news.1.get_absolute_url }}">{{ sport_news.1.title | truncatewords:5}}</a>
                                     <p class="m-0">{{ sport_news.1.body | truncatewords:10}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -188,7 +188,7 @@
                                             href="">Sport</a>
                                         <a class="text-body" href=""><small>{{local_news.2.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ sport_news.2.title | truncatewords:5}}</a>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ sport_news.2.get_absolute_url }}">{{ sport_news.2.title | truncatewords:5}}</a>
                                     <p class="m-0">{{ sport_news.2.body | truncatewords:10}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -214,7 +214,7 @@
                                             href="">O'zbekiston</a>
                                         <a class="text-body" href=""><small>{{ local_news.1.created_time }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.1.pk %}">{{ local_news.1.title | truncatewords:5}}</a>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ local_news.1.get_absolute_url }}">{{ local_news.1.title | truncatewords:5}}</a>
                                     <p class="m-0">{{ local_news.1.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -236,9 +236,9 @@
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_news.2.created_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{ local_news.2.created_time }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_news.2.pk %}">{{ local_news.2.title | truncatewords:5}}</a>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ local_news.2.get_absolute_url }}">{{ local_news.2.title | truncatewords:5}}</a>
                                     <p class="m-0">{{ local_news.2.body | truncatewords:7}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -253,7 +253,6 @@
                                 </div>
                             </div>
                         </div>
-
                          <div class="col-lg-6">
                             <div class="position-relative mb-3">
                                 <img class="img-fluid w-100" src="{{ economy.1.image.url }}" style="object-fit: cover;">

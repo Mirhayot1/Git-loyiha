@@ -140,7 +140,7 @@ class ContactPageView(TemplateView):
 
 
     def post(self, request, *args, **kwargs):
-        form = ContactForm(request, POST)
+        form = ContactForm(request.POST)
         if request.method == 'POST' and form.is_valid():
             form.save()
             return HttpResponse("<h2> Habar yuborildi </h2>")

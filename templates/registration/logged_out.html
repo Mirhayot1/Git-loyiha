@@ -1,0 +1,25 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title%} Logget out {% endblock title%}
+
+{% block content %}
+
+<body>
+<div class="message">
+    <div class="message-header">
+        <h2>Siz Saytdan chiqdingiz</h2>
+    </div>
+    <div class="message-body">
+        <h4><a href="{% url 'login' %}"></a></h4>
+    </div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+{% endblock content %}
