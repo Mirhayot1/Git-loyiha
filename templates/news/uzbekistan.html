@@ -20,15 +20,15 @@
                         </div>
                          <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ local_news.1.image.url }}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ localnews.1.image.url }}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_news.1.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.1.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ local_news.1.get_absolute_url }}">{{ localnews.1.title | truncatewords:5  }}</a>
-                                    <p class="m-0">{{local_news.1.body | truncatewords:8}}</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ localnews.1.get_absolute_url }}">{{ localnews.1.title | truncatewords:5  }}</a>
+                                    <p class="m-0">{{localnews.1.body | truncatewords:8}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -44,15 +44,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_2.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.2.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_2.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.2.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_2.pk %}">{{local_2.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{local_2.body | truncatewords:8}}</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ localnews.2.get_absolute_url %}">{{localnews.2.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{localnews.2.body | truncatewords:8}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -68,15 +68,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_3.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.3.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_3.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.3.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_3.pk %}">{{local_3.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_3.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ localnews.3.get_absolute_url }}">{{localnews.3.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.3.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -92,15 +92,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_4.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.4.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_4.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.4.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_4.pk %}">{{local_4.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_4.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ localnews.4.get_absolute_url }}">{{localnews.4.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.4.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -116,15 +116,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_5.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.5.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_5.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.5.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_5.pk %}">{{local_5.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_5.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{localnews.5.get_absolute_url }}">{{localnews.5.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.5.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -140,15 +140,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_6.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{ localnews.6.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_6.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.6.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_6.pk %}">{{local_6.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_6.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ localnews.6.get_absolute_url }}">{{localnews.6.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.6.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -165,17 +165,17 @@
                         <div class="col-lg-12">
                             <div class="row news-lg mx-0 mb-3">
                                 <div class="col-md-6 h-100 px-0">
-                                    <img class="img-fluid h-100" src="{{local_7.image.url}}" style="object-fit: cover;">
+                                    <img class="img-fluid h-100" src="{{localnews.7.image.url}}" style="object-fit: cover;">
                                 </div>
                                 <div class="col-md-6 d-flex flex-column border bg-white h-100 px-0">
                                     <div class="mt-auto p-4">
                                         <div class="mb-2">
                                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                                 href="">O'zbekiston</a>
-                                            <a class="text-body" href=""><small>{{local_7.publish_time}}</small></a>
+                                            <a class="text-body" href=""><small>{{localnews.7.publish_time}}</small></a>
                                         </div>
-                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_7.pk %}">{{local_7.title | truncatewords:5}}</a>
-                                        <p class="m-0">{{local_7.body | truncatewords:8}}</p>
+                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{localnews.7.get_absolute_url}}">{{localnews.7.title | truncatewords:5}}</a>
+                                        <p class="m-0">{{localnews.7.body | truncatewords:8}}</p>
                                     </div>
                                     <div class="d-flex justify-content-between bg-white border-top mt-auto p-4">
                                         <div class="d-flex align-items-center">
@@ -192,15 +192,15 @@
                         </div>
                        <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_8.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.8.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_8.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.8.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_8.pk %}">{{local_8.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_8.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{localnews.8.get_absolute_url}}">{{localnews.8.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.8.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
@@ -216,15 +216,15 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{local_9.image.url}}" style="object-fit: cover;">
+                                <img class="img-fluid w-100" src="{{localnews.9.image.url}}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">O'zbekiston</a>
-                                        <a class="text-body" href=""><small>{{local_9.publish_time}}</small></a>
+                                        <a class="text-body" href=""><small>{{localnews.9.publish_time}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' local_9.pk %}">{{local_9.title | truncatewords:5}}</a>
-                                    <p class="m-0">{{ local_9.body | truncatewords:7 }}</p>
+                                    <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{localnews.9.get_absolute_url}}">{{localnews.9.title | truncatewords:5}}</a>
+                                    <p class="m-0">{{ localnews.9.body | truncatewords:7 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">

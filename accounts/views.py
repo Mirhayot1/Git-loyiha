@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import LoginForm
 from django.contrib.auth import authenticate, login
+from django.views import View
+from .models import Profile
 
 
 
@@ -34,3 +36,16 @@ def user_login(request):
             'form' : form,
         }
     return render(request, 'registration/login.html', context)
+
+
+
+
+
+def dashboard_view(request):
+    user = request.user
+    profile = Profile.objects.get(user=user)
+    context = {
+        'user':user,
+        'profile': profile,
+    }
+    return render(request, 'pages/user_profile.html', context)

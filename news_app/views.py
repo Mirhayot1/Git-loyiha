@@ -60,7 +60,7 @@ class HomePageView2(TemplateView):
         context['sport_news'] = News.published.all().filter(category__name="Sport").order_by('-publish_time')
         context['techno_news'] = News.published.all().filter(category__name="Fan_texnika").order_by('-publish_time')
         context['economy'] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time')
-        # context['galery] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time)
+        # context['galery'] = News.published.all().filter(category__name="Iqtisodiyot").order_by('-publish_time')
         context['jamiyat'] = News.published.all().filter(category__name="Jamiyat").order_by('-publish_time')
         return context
 
