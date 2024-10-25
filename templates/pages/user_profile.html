@@ -7,12 +7,167 @@ Foydalanuvchi prorfili
 {% endblock title %}
 
 {% block content %}
+    <title>Foydalanuvchi profili</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        /* Orqa fon va markazlashtirish */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #667eea, #764ba2, #ffb6c1);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
 
-<link rel="stylesheet" href="{% static 'dist/css/user_profile.css'%}">
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Profil kartasi */
+        .profile-card {
+            width: 350px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #764ba2;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-name {
+            margin: 15px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-role {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .profile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .profile-socials a {
+            color: #667eea;
+            font-size: 1.5em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .profile-socials a:hover {
+            color: #764ba2;
+            transform: scale(1.2);
+        }
+
+        /* Tugmalar */
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .profile-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #667eea;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .profile-buttons button:hover {
+            background-color: #4a56d1;
+            transform: translateY(-3px);
+        }
+
+        .profile-buttons button:active {
+            transform: scale(0.95);
+        }
+    </style>
+
 <body>
-    <div>
 
+<div class="profile-card">
+    <img src="https://via.placeholder.com/100" alt="User Avatar">
+    <h2 class="profile-name">Mirhayot</h2>
+    <p class="profile-role">Web Developer</p>
+
+    <!-- Foydalanuvchi ma'lumotlari -->
+    <p class="profile-info"><strong>Email:</strong> mirhayot@example.com</p>
+    <p class="profile-info"><strong>Telefon:</strong> +998 90 123 45 67</p>
+    <p class="profile-info"><strong>Yosh:</strong> 25</p>
+    <p class="profile-info"><strong>Manzil:</strong> Xorazm, O'zbekiston</p>
+
+
+    <!-- Ijtimoiy tarmoqlar -->
+    <div class="profile-socials">
+        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
-</body>
+
+    <a class="btn btn-info " href="{% url 'password_change'%}"> Parolni o'zgartirish</a>
+
+    <!-- Tugmalar -->
+    <div class="profile-buttons">
+        <button onclick="followUser()">Follow</button>
+        <button onclick="messageUser()">Message</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    function followUser() {
+        alert("Siz foydalanuvchini kuzatishni boshladingiz!");
+    }
+
+    function messageUser() {
+        alert("Xabar yuborish oynasi ochildi.");
+    }
+</script>
+
+
 {% endblock content %}

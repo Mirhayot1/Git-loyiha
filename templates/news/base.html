@@ -54,6 +54,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-body small" href="{% url 'logout' %}">Tizimdan chiqish</a>
                         </li>
+                        <li>
+                            {% if messages%}
+                                {% for message in messages %}
+                                    message
+                                {% endfor %}
+                            {% endif %}
+                        </li>
                     </ul>
                 </nav>
             </div>

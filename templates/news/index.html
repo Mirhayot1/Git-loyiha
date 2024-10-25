@@ -313,7 +313,7 @@
                                                 href="">Fan-texnika</a>
                                             <a class="text-body" href=""><small>{{ techno_news1.created_time }}</small></a>
                                         </div>
-                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'news_detail_page' techno_news.1.pk %}">{{ techno_news.1.title | truncatewords:6 }}</a>
+                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ techno_news.1.get_absolute_url }}">{{ techno_news.1.title | truncatewords:6 }}</a>
                                         <p class="m-0">{{ techno_news.1.body | truncatewords:12 }}</p>
                                     </div>
                                     <div class="d-flex justify-content-between bg-white border-top mt-auto p-4">

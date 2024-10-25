@@ -1,3 +1,7 @@
+from django.shortcuts import render, redirect
+from django.views import View
+from django.contrib.auth import login, logout
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import LoginForm
@@ -49,3 +53,11 @@ def dashboard_view(request):
         'profile': profile,
     }
     return render(request, 'pages/user_profile.html', context)
+
+
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        messages.info(request, "Siz tizimdan chiqdingiz")
+        return redirect('home')
